@@ -6,11 +6,12 @@
 /*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 11:17:04 by pyathams          #+#    #+#             */
-/*   Updated: 2024/03/06 19:20:36 by pyathams         ###   ########.fr       */
+/*   Updated: 2024/03/09 18:03:31 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+// #include <bsd/string.h>
 //#include <stdio.h>
 /*
 DESCRIPTION
@@ -66,14 +67,37 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	return (count);
 }
 
-// int	main(void)
-// {
-// 	char		dest[50]= "";
-// 	const char	src[50]= "";
-// 	size_t		i;
+// void test_case(const char *src, size_t size) {
+//     char dest[size];
+//     size_t copied_length_ft, copied_length_orig;
 
-// 	i = ft_strlcpy(dest,src,18);
-// 	printf("%s\n",dest);
-// 	printf("%ld",i);
-// 	return (0);
+//     printf("Source: %s, Size: %zu\n", src, size);
+
+//     // Test ft_strlcpy
+//     copied_length_ft = ft_strlcpy(dest, src, size);
+// printf("ft_strlcpy: Copied: \"%s\", Length: %zu\n", dest, copied_length_ft);
+
+//     // Test strlcpy
+//     char dest_orig[size];
+//     copied_length_orig = strlcpy(dest_orig, src, size);
+//printf("strlcpy: Copied: \"%s\",Length: %zu\n",dest_orig,copied_length_orig);
+
+//     // Compare results
+// if (copied_length_ft == copied_length_orig && strcmp(dest, dest_orig) == 0) {
+//         printf("Test Passed!\n\n");
+//     } else {
+//         printf("Test Failed!\n\n");
+//     }
+// }
+
+// int main() {
+//     // Test cases
+//     test_case("Hello, World!", 20); // Basic functionality
+//     test_case("", 10); // Empty string
+//     test_case("Test", 0); // Source string fits in destination of size 1
+//     test_case("This is a long string for testing.", 10);
+//     test_case("This is a long string for testing.", 100);
+//     test_case("This is a long string for testing.", 5);
+
+//     return 0;
 // }

@@ -45,7 +45,7 @@ char	*ft_strrchr(const char *s, int c)
 {
 	const char	*last;
 
-	last = 0;
+	last = NULL;
 	while (*s != '\0')
 	{
 		if (*s == (unsigned char)c)

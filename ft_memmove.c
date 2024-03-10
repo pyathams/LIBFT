@@ -6,7 +6,7 @@
 /*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 14:31:02 by pyathams          #+#    #+#             */
-/*   Updated: 2024/03/03 23:08:37 by pyathams         ###   ########.fr       */
+/*   Updated: 2024/03/09 17:25:17 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,18 +29,21 @@ RETURN VALUE
 
 void	*ft_memmove(void *dest, const void *src, size_t len)
 {
+	char		*res;
+	const char	*source;
+
+	res = (char *)dest;
+	source = (const char *)src;
 	if (dest > src && dest < src + len)
 	{
-		while (len > 0)
+		while (len--)
 		{
-			((char *)dest)[len -1] = ((char *) src)[len -1];
-			len--;
+			res[len] = source[len];
 		}
 	}
 	else
 	{
 		ft_memcpy(dest, src, len);
-		return (dest);
 	}
 	return (dest);
 }

@@ -6,7 +6,7 @@
 /*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 22:29:15 by pyathams          #+#    #+#             */
-/*   Updated: 2024/03/04 13:04:02 by pyathams         ###   ########.fr       */
+/*   Updated: 2024/03/10 18:52:21 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_strdup(const char *s)
 {
 	char	*dup;
 
-	dup = (char *)malloc((sizeof(char) * ft_strlen(s)) + 1);
+	dup = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!dup)
 	{
 		return (NULL);

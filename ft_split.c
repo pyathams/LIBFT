@@ -6,7 +6,7 @@
 /*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 16:03:20 by pyathams          #+#    #+#             */
-/*   Updated: 2024/03/07 16:32:01 by pyathams         ###   ########.fr       */
+/*   Updated: 2024/03/09 18:14:48 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static size_t	ft_count(char const *s, char c)
 	return (count);
 }
 
-void	ft_free_str_array(char **str_array)
+static void	ft_free_str_array(char **str_array)
 {
 	size_t	i;
 
@@ -61,9 +61,10 @@ void	ft_free_str_array(char **str_array)
 		i++;
 	}
 	free(str_array);
+	return ;
 }
 
-char	**ft_returnstr(char const *s, char c, char *start, char **res)
+static char	**ft_returnstr(char const *s, char c, char *start, char **res)
 {
 	size_t	j;
 
@@ -95,8 +96,6 @@ char	**ft_split(char const *s, char c)
 	char	*start;
 
 	res = ft_calloc((ft_count(s, c) + 1), sizeof(char *));
-	if (!res)
-		return (NULL);
 	start = NULL;
 	res = ft_returnstr(s, c, start, res);
 	return (res);

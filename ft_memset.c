@@ -6,13 +6,11 @@
 /*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 19:34:23 by pyathams          #+#    #+#             */
-/*   Updated: 2024/03/06 19:13:27 by pyathams         ###   ########.fr       */
+/*   Updated: 2024/03/08 16:00:35 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 /*
 NAME
        memset - fill memory with a constant byte
@@ -39,7 +37,6 @@ void	*ft_memset(void *s, int c, size_t n)
 		*pt_s++ = (unsigned char)c;
 	return (s);
 }
-
 // int	main(void)
 // {
 // 	char	str[10];

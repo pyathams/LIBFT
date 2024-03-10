@@ -6,7 +6,7 @@
 /*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 15:01:09 by pyathams          #+#    #+#             */
-/*   Updated: 2024/03/04 16:15:53 by pyathams         ###   ########.fr       */
+/*   Updated: 2024/03/09 18:08:05 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Description Allocates (with malloc(3)) and returns a copy of
 ’s1’ with the characters specified in ’set’ removed
 from the beginning and the end of the string.
 */
-size_t	ft_trim(char const *set, char c)
+static size_t	ft_trim(char const *set, char c)
 {
 	size_t	i;
 

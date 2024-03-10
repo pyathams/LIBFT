@@ -6,13 +6,13 @@
 /*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 16:20:30 by pyathams          #+#    #+#             */
-/*   Updated: 2024/03/06 15:14:46 by pyathams         ###   ########.fr       */
+/*   Updated: 2024/03/09 18:23:18 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
+// #include <stdio.h>
+// #include <string.h>
 /*
 Function name ft_itoa
 Prototype char *ft_itoa(int n);
@@ -26,7 +26,7 @@ representing the integer received as an argument.
 Negative numbers must be handled.
 */
 
-size_t	ft_count(int n)
+static size_t	ft_count(int n)
 {
 	size_t	i;
 
@@ -46,7 +46,7 @@ size_t	ft_count(int n)
 	return (i);
 }
 
-char	*ft_returnstr(char *str, int n, size_t len)
+static char	*ft_returnstr(char *str, int n, size_t len)
 {
 	str[len] = '\0';
 	if (n == 0)

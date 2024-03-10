@@ -6,11 +6,12 @@
 /*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 17:08:10 by pyathams          #+#    #+#             */
-/*   Updated: 2024/03/06 19:20:19 by pyathams         ###   ########.fr       */
+/*   Updated: 2024/03/09 18:07:34 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+// #include <bsd/string.h>
 /*
 DESCRIPTION
      The strlcpy() and strlcat() functions copy and concatenate strings re‐
@@ -61,10 +62,53 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 	return (ret + i);
 }
 
-// int	main(void)
-// {
-//  	char destination[20] = "hello";
-//  	const char *source = "";
-//  	printf("%ld\n",ft_strlcat(destination,source,20));
-//  	printf("%s\n",destination);
+// void test_functions(char *dest, const char *src, size_t dstsize) {
+//     char dest_ft[20], dest_str[20];
+//     strcpy(dest_ft, dest);
+//     strcpy(dest_str, dest);
+
+//     size_t result_ft = ft_strlcat(dest_ft, src, dstsize);
+//     size_t result_str = strlcat(dest_str, src, dstsize);
+
+//printf("Result of ft_strlcat:%zu,Concatenated string:%s\n",result_ft,dest_ft);
+//printf("Result of strlcat: %zu,Concatenated string:%s\n",result_str,dest_str);
+
+//     if (strcmp(dest_ft, dest_str) == 0) {
+//         printf("Output is same for both functions.\n");
+//     } else {
+//         printf("Output differs between functions.\n");
+//     }
+// }
+
+// int main() {
+//     char dest[20] = "Hello ";
+//     const char *src = "World!";
+
+//     printf("Test 1: dstsize is large enough\n");
+//     test_functions(dest, src, 20);
+//     printf("\nTest 2: dstsize is exactly the length of dest\n");
+//     test_functions(dest, src, 11);
+
+//     printf("\nTest 3: dstsize is less than the length of dest\n");
+//     test_functions(dest, src, 6);
+
+//     printf("\nTest 4: Concatenating with empty dest\n");
+//     char empty_dest[20] = "";
+//     test_functions(empty_dest, src, 20);
+
+//     printf("\nTest 5: Concatenating with empty src\n");
+//     char empty_src[20] = "";
+//     test_functions(dest, empty_src, 20);
+
+//     printf("\nTest 6: Concatenating with both empty dest and src\n");
+//     test_functions(empty_dest, empty_src, 20);
+
+//     printf("\nTest 7: Concatenating with src longer than dstsize\n");
+//     test_functions(dest, "This is a long string", 7);
+
+//     printf("\nTest 8: Concatenating with overlapping dest and src\n");
+//     char overlapping_dest_src[20] = "HelloWorld!";
+//     test_functions(overlapping_dest_src + 5, overlapping_dest_src, 20);
+
+//     return 0;
 // }

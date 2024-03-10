@@ -6,7 +6,7 @@
 #    By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/02 11:57:08 by pyathams          #+#    #+#              #
-#    Updated: 2024/03/07 16:03:19 by pyathams         ###   ########.fr        #
+#    Updated: 2024/03/10 21:44:47 by pyathams         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,12 +48,25 @@ SRC		=	ft_bzero.c \
 			ft_strmapi.c \
 			ft_strtrim.c \
 			ft_putnbr_fd.c \
+
+SRCB	=	ft_lstnew.c \
+			ft_lstadd_front.c \
+			ft_lstsize.c \
+			ft_lstlast.c \
+			ft_lstadd_back.c \
+			ft_lstdelone.c \
+			ft_lstclear.c \
+			ft_lstiter.c \
+			ft_lstmap.c \
 			
 # The flags to compile the c files with			
 CFLAGS	= -Wall -Wextra -Werror
 
 # The object files for mandatory part.
 OBJM	= $(SRC:.c=.o)
+
+# The object files for BONUS part.
+OBJB	= $(SRCB:.c=.o)
 
 # Variables
 CC		= gcc
@@ -71,9 +84,13 @@ all: ${NAME}
 
 #CLEANING FILE WHEN IT CALLED 
 clean:
-	${RM} ${OBJM}
+	${RM} ${OBJM} ${OBJB}
 #FORCECLEAN INCLUDING THE NAME
 fclean:	clean
 	${RM} ${NAME}
 
-re:	fclean all			
+#Recompiling everything
+re:	fclean all
+
+bonus :	${OBJB}
+	ar rcs ${NAME} ${OBJB}

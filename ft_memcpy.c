@@ -6,14 +6,14 @@
 /*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 13:54:01 by pyathams          #+#    #+#             */
-/*   Updated: 2024/03/06 15:37:29 by pyathams         ###   ########.fr       */
+/*   Updated: 2024/03/09 18:10:40 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <unistd.h>
-#include <stddef.h>
+// #include <string.h>
+// #include <unistd.h>
+// #include <stddef.h>
 /*DESCRIPTION
        The  memcpy()  function copies n bytes from memory
        area src to memory area dest.   The  memory  areas
@@ -27,13 +27,15 @@ RETURN VALUE
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char	*ret;
+	const char		*source;
 
 	if (!dest && !src)
 		return (NULL);
 	ret = (unsigned char *)dest;
+	source = (const char *)src;
 	while (n--)
 	{
-		*ret++ = *(const char *)src++;
+		*ret++ = *source++;
 	}
 	return (dest);
 }

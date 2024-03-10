@@ -6,7 +6,7 @@
 /*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 20:54:08 by pyathams          #+#    #+#             */
-/*   Updated: 2024/03/04 13:03:43 by pyathams         ###   ########.fr       */
+/*   Updated: 2024/03/10 20:50:58 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,12 +78,13 @@ RETURN VALUEimnt,ax oim
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ret;
-	size_t	total_size;
 
-	total_size = nmemb * size;
 	if (nmemb == 0 || size == 0)
-		return (NULL);
-	if (nmemb != total_size / size)
+	{
+		nmemb = 1;
+		size = 1;
+	}
+	if (nmemb > 2147483647 / size)
 		return (NULL);
 	ret = malloc(nmemb * size);
 	if (!ret)
