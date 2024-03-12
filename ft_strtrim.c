@@ -6,25 +6,12 @@
 /*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 15:01:09 by pyathams          #+#    #+#             */
-/*   Updated: 2024/03/09 18:08:05 by pyathams         ###   ########.fr       */
+/*   Updated: 2024/03/12 17:52:24 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-/*
-Function name ft_strtrim
-Prototype char *ft_strtrim(char const *s1, char const *set);
-Turn in files -
-Parameters s1: The string to be trimmed.
-set: The reference set of characters to trim.
-Return value The trimmed string.
-NULL if the allocation fails.
-External functs. malloc
-Description Allocates (with malloc(3)) and returns a copy of
-’s1’ with the characters specified in ’set’ removed
-from the beginning and the end of the string.
-*/
+
 static size_t	ft_trim(char const *set, char c)
 {
 	size_t	i;

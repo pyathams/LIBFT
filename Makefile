@@ -6,7 +6,7 @@
 #    By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/02 11:57:08 by pyathams          #+#    #+#              #
-#    Updated: 2024/03/10 21:44:47 by pyathams         ###   ########.fr        #
+#    Updated: 2024/03/12 16:19:46 by pyathams         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,7 +69,7 @@ OBJM	= $(SRC:.c=.o)
 OBJB	= $(SRCB:.c=.o)
 
 # Variables
-CC		= gcc
+CC		= cc
 RM		= rm -f
 
 #rule for c and o files 

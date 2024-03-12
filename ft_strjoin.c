@@ -6,13 +6,13 @@
 /*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 13:30:58 by pyathams          #+#    #+#             */
-/*   Updated: 2024/03/04 15:54:31 by pyathams         ###   ########.fr       */
+/*   Updated: 2024/03/12 17:28:23 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
+// #include <stdio.h>
+// #include <string.h>
 /*
 Function name ft_strjoin
 Prototype char *ft_strjoin(char const *s1, char const *s2);
@@ -38,8 +38,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = ft_strlen(s1);
 	j = ft_strlen(s2);
 	str = ft_calloc((i + j + 1), sizeof(char));
-	if (!str)
-		return (NULL);
 	ft_strlcpy(str, s1, (i + 1));
 	ft_strlcat(str, s2, (i + j + 1));
 	return (str);
@@ -47,5 +45,5 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 // int	main(void)
 // {
-// 	printf("%s \n",ft_strjoin("hello","world!"));
+// 	printf("%s",ft_strjoin("hello","world!   a"));
 // }
