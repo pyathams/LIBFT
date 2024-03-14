@@ -6,7 +6,7 @@
 #    By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/02 11:57:08 by pyathams          #+#    #+#              #
-#    Updated: 2024/03/12 16:19:46 by pyathams         ###   ########.fr        #
+#    Updated: 2024/03/12 18:54:03 by pyathams         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,8 +40,8 @@ SRC		=	ft_bzero.c \
 			ft_substr.c \
 			ft_itoa.c \
 			ft_putchar_fd.c \
-			ft_putendl_fd.c \
 			ft_putstr_fd.c \
+			ft_putendl_fd.c \
 			ft_split.c \
 			ft_striteri.c \
 			ft_strjoin.c \
@@ -69,12 +69,12 @@ OBJM	= $(SRC:.c=.o)
 OBJB	= $(SRCB:.c=.o)
 
 # Variables
-CC		= cc
+CC		= gcc
 RM		= rm -f
 
 #rule for c and o files 
 %.o : %.c
-	${CC} ${CFLAGS} -g -c $*.c -o $*.o
+	${CC} ${CFLAGS} -g -c $< -o $@
 
 #compiles the mandatory part of the library.
 ${NAME}: ${OBJM}
@@ -92,5 +92,5 @@ fclean:	clean
 #Recompiling everything
 re:	fclean all
 
-bonus :	${OBJB}
+bonus :	${OBJB} ${OBJM}
 	ar rcs ${NAME} ${OBJB}
