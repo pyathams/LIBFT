@@ -1,4 +1,4 @@
-Libft Introduction
+# Libft Introduction
 Libft (Library of Functions)
 
 In this project, you will be creating a library of functions, the file structure for this project is the following:
